@@ -8,8 +8,11 @@
     --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-600: oklch(57.7% 0.245 27.325);
     --color-red-700: oklch(50.5% 0.213 27.518);
     --color-orange-400: oklch(75% 0.183 55.934);
+    --color-amber-400: oklch(82.8% 0.189 84.429);
+    --color-cyan-400: oklch(78.9% 0.154 211.53);
     --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-black: #000;
     --spacing: 0.25rem;
@@ -442,10 +445,16 @@
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
+  .place-self-end {
+    place-self: end;
+  }
   .alert-info {
     border-color: var(--color-info);
     color: var(--color-info-content);
     --alert-color: var(--color-info);
+  }
+  .bg-amber-400 {
+    background-color: var(--color-amber-400);
   }
   .bg-black {
     background-color: var(--color-black);
@@ -455,6 +464,15 @@
   }
   .bg-red-700 {
     background-color: var(--color-red-700);
+  }
+  .fill-accent {
+    fill: var(--color-accent);
+  }
+  .fill-red-600 {
+    fill: var(--color-red-600);
+  }
+  .align-bottom {
+    vertical-align: bottom;
   }
   .font-serif {
     font-family: var(--font-serif);
@@ -481,6 +499,9 @@
   .text-orange-400 {
     color: var(--color-orange-400);
   }
+  .text-red-600 {
+    color: var(--color-red-600);
+  }
   @media (hover: hover) {
     .hover\:motion-preset-focus:hover {
       --motion-origin-blur: 5px;
@@ -504,6 +525,11 @@
       --motion-duration: 800ms;
       --motion-opacity-in-animation: motion-opacity-in calc(var(--motion-opacity-duration, var(--motion-duration)) * var(--motion-opacity-perceptual-duration-multiplier, var(--motion-perceptual-duration-multiplier))) var(--motion-opacity-timing, var(--motion-timing)) var(--motion-opacity-delay, var(--motion-delay)) both;
       animation: var(--motion-scale-in-animation), var(--motion-translate-in-animation), var(--motion-rotate-in-animation), var(--motion-filter-in-animation), var(--motion-opacity-in-animation), var(--motion-background-color-in-animation), var(--motion-text-color-in-animation), var(--motion-scale-loop-animation), var(--motion-translate-loop-animation), var(--motion-rotate-loop-animation), var(--motion-filter-loop-animation), var(--motion-opacity-loop-animation), var(--motion-background-color-loop-animation), var(--motion-text-color-loop-animation);
+    }
+  }
+  @media (hover: hover) {
+    .hover\:text-cyan-400:hover {
+      color: var(--color-cyan-400);
     }
   }
 }
