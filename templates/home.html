@@ -3,7 +3,7 @@
 {% block content %}
 <div class="flex  flex-col items-center justify-center h-screen w-screen">
   <h1 class="text-9xl motion-preset-focus">HOME</h1>
-  <p class="motion-preset-focus">Django Tailwind Template by <span class="text-orange-400 hover:text-cyan-400"><a href="https://github.com/kimbrenekakande">@kimbrenekakande</a></span></p>
+  <p class="motion-preset-focus">Django Tailwind Template by <span class="text-orange-400 hover:text-cyan-400"><a href="{% url 'dashboard' %}">@kimbrenekakande</a></span></p>
   <div class="h-8 w-full flex gap-4 items-center justify-center motion-preset-focus mt-10">
     <a href="https://github.com/kimbrenekakande" target="_blank">
       <img class="h-6 w-6 hover:motion-preset-fade-lg" src="{% static 'svgs/github-white-icon.svg' %}" alt="">
@@ -15,9 +15,7 @@
       <img class="h-6 w-6 hover:motion-preset-fade-lg text-red-600" src="{% static 'svgs/linkedin-app-white-icon.svg' %}" alt="">
     </a> 
   </div>
-  <a href="{% url 'home' %}" class="motion-preset-focus place-self-end">Docs</a>
 </div>
-<a href="{% url 'home' %}" class="motion-preset-focus place-self-end">Docs</a>
 
 
 {% endblock %}
