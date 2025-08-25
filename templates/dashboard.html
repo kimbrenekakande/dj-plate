@@ -1,35 +1,37 @@
-{% extends '_base.html' %}
+{% extends 'base.html' %}
 {% load static %}
+{% csrf_token %}
 {% block content %}
 <div id="dash" class=" flex h-screen w-screen bg-gray-400 gap-[1px]">
   <div id="sidebar" class=" flex flex-col h-screen w-[70px] bg-gray-400 gap-[1px]">
     <div class="h-[70px] w-fill bg-black"></div>
     <div class=" flex flex-col items-center justify-between text-white h-[100%] w-fill bg-black">
       <div id="upper-icons" class="flex flex-col mt-10 gap-[15px]">
-        <a href="#">
+        <div hx-get=" {% url 'home' %}" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' hx-trigger="click" hx-target="#content-body" hx-swap="innerHTML" class="hover:cursor-pointer hover:motion-preset-fade-lg">
           <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house-icon lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-        </a>
-        <a href="#">
+        </div>
+        <div hx-get=" {% url 'list' %}" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' hx-trigger="click" hx-target="#content-body" hx-swap="innerHTML" class="hover:cursor-pointer hover:motion-preset-fade-lg">
           <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notepad-text-icon lucide-notepad-text"><path d="M8 2v4"/><path d="M12 2v4"/><path d="M16 2v4"/><rect width="16" height="18" x="4" y="4" rx="2"/><path d="M8 10h6"/><path d="M8 14h8"/><path d="M8 18h5"/></svg>
-        </a>
-        <a href="#">
+        </div>
+        <div hx-get=" {% url 'billing' %}" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' hx-trigger="click" hx-target="#content-body" hx-swap="innerHTML" class="hover:cursor-pointer hover:motion-preset-fade-lg">
           <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-credit-card-icon lucide-credit-card"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
-        </a>
-        <a href="#">
-          <svg xmlns="http://www.w3.org/2000/svg" width="35"  height="35" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user-round-icon lucide-circle-user-round"><path d="M18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg>
-        </a>
-        <a href="#">
+        </div>
+        <div hx-get=" {% url 'profile' %}" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' hx-trigger="click" hx-target="#content-body" hx-swap="innerHTML" class="hover:cursor-pointer hover:motion-preset-fade-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user-round-icon lucide-circle-user-round"><path d="M18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg>
+        </div>
+        <div hx-get=" {% url 'settings' %}" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' hx-trigger="click" hx-target="#content-body" hx-swap="innerHTML" class="hover:cursor-pointer hover:motion-preset-fade-lg">
           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings-icon lucide-settings"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></svg>
-        </a>
+        </div>
       </div>
 
+
       <div id="lower-icons" class="flex flex-col mb-10 gap-[10px]">
-        <a href="#">
+        <div hx-get=" {% url 'list' %}" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' hx-trigger="click" hx-target="#content-body" hx-swap="innerHTML" class="hover:cursor-pointer hover:motion-preset-fade-lg">
           <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share2-icon lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
-        </a>
-        <a href="#">
+        </div>
+        <div hx-get=" {% url 'list' %}" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' hx-trigger="click" hx-target="#content-body" hx-swap="innerHTML" class="hover:cursor-pointer hover:motion-preset-fade-lg">
           <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-question-mark-icon lucide-circle-question-mark"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
-        </a>
+        </div>
       </div>
     </div>
   </div>
@@ -37,12 +39,7 @@
   <div id="main-content" class=" flex flex-col h-screen w-screen gap-[1px]">
     <div id="header" class="h-[70px] w-fill bg-black"></div>
     <div id="content-body" class="h-full w-fill bg-black">
-      <div class="flex items-center justify-center h-full w-full">
-        <a class="motion-preset-spin motion-loop-once motion-duration-200 hover:motion-preset-expand" href="#">
-          <svg class="h-[150px] w-[150px] stroke-orange-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-      </div>
+      <c-_home></c-_home>
     </div>
   </div>
 </div>
