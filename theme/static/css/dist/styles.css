@@ -1,5 +1,4 @@
 /*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */
-@layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -17,10 +16,6 @@
     --spacing: 0.25rem;
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
-    --text-4xl: 2.25rem;
-    --text-4xl--line-height: calc(2.5 / 2.25);
-    --text-6xl: 3.75rem;
-    --text-6xl--line-height: 1;
     --text-9xl: 8rem;
     --text-9xl--line-height: 1;
     --default-font-family: var(--font-sans);
@@ -229,23 +224,8 @@
   .static {
     position: static;
   }
-  .col-span-1 {
-    grid-column: span 1 / span 1;
-  }
-  .col-span-22 {
-    grid-column: span 22 / span 22;
-  }
-  .row-span-2 {
-    grid-row: span 2 / span 2;
-  }
-  .row-span-8 {
-    grid-row: span 8 / span 8;
-  }
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
-  }
-  .mb-5 {
-    margin-bottom: calc(var(--spacing) * 5);
   }
   .mb-10 {
     margin-bottom: calc(var(--spacing) * 10);
@@ -256,17 +236,11 @@
   .flex {
     display: flex;
   }
-  .grid {
-    display: grid;
-  }
   .h-6 {
     height: calc(var(--spacing) * 6);
   }
   .h-8 {
     height: calc(var(--spacing) * 8);
-  }
-  .h-20 {
-    height: calc(var(--spacing) * 20);
   }
   .h-\[70px\] {
     height: 70px;
@@ -301,15 +275,6 @@
   .w-screen {
     width: 100vw;
   }
-  .motion-preset-blur-down {
-    --motion-origin-blur: 5px;
-    --motion-origin-translate-y: -5%;
-    --motion-origin-opacity: 0;
-    --motion-opacity-in-animation: motion-opacity-in calc(var(--motion-opacity-duration, var(--motion-duration)) * var(--motion-opacity-perceptual-duration-multiplier, var(--motion-perceptual-duration-multiplier))) var(--motion-opacity-timing, var(--motion-timing)) var(--motion-opacity-delay, var(--motion-delay)) both;
-    --motion-filter-in-animation: motion-filter-in calc(var(--motion-filter-duration, var(--motion-duration)) * var(--motion-filter-perceptual-duration-multiplier, var(--motion-perceptual-duration-multiplier))) var(--motion-filter-timing, var(--motion-timing)) var(--motion-filter-delay, var(--motion-delay)) both;
-    --motion-translate-in-animation: motion-translate-in calc(var(--motion-translate-duration, var(--motion-duration)) * var(--motion-translate-perceptual-duration-multiplier, var(--motion-perceptual-duration-multiplier))) var(--motion-translate-timing, var(--motion-timing)) var(--motion-translate-delay, var(--motion-delay)) both;
-    animation: var(--motion-scale-in-animation), var(--motion-translate-in-animation), var(--motion-rotate-in-animation), var(--motion-filter-in-animation), var(--motion-opacity-in-animation), var(--motion-background-color-in-animation), var(--motion-text-color-in-animation), var(--motion-scale-loop-animation), var(--motion-translate-loop-animation), var(--motion-rotate-loop-animation), var(--motion-filter-loop-animation), var(--motion-opacity-loop-animation), var(--motion-background-color-loop-animation), var(--motion-text-color-loop-animation);
-  }
   .motion-preset-focus {
     --motion-origin-blur: 5px;
     --motion-origin-opacity: 0;
@@ -322,15 +287,6 @@
     --motion-timing: linear;
     --motion-rotate-loop-animation: motion-rotate-loop-reset calc(var(--motion-rotate-duration, var(--motion-duration)) * var(--motion-rotate-perceptual-duration-multiplier, var(--motion-perceptual-duration-multiplier))) var(--motion-rotate-timing, var(--motion-timing)) var(--motion-rotate-delay, var(--motion-delay)) both var(--motion-rotate-loop-count, var(--motion-loop-count));
     animation: var(--motion-scale-in-animation), var(--motion-translate-in-animation), var(--motion-rotate-in-animation), var(--motion-filter-in-animation), var(--motion-opacity-in-animation), var(--motion-background-color-in-animation), var(--motion-text-color-in-animation), var(--motion-scale-loop-animation), var(--motion-translate-loop-animation), var(--motion-rotate-loop-animation), var(--motion-filter-loop-animation), var(--motion-opacity-loop-animation), var(--motion-background-color-loop-animation), var(--motion-text-color-loop-animation);
-  }
-  .cursor-grab {
-    cursor: grab;
-  }
-  .grid-cols-24 {
-    grid-template-columns: repeat(24, minmax(0, 1fr));
-  }
-  .grid-rows-12 {
-    grid-template-rows: repeat(12, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -356,58 +312,18 @@
   .gap-\[15px\] {
     gap: 15px;
   }
-  .border-1 {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
-  .border-t {
-    border-top-style: var(--tw-border-style);
-    border-top-width: 1px;
-  }
-  .border-r {
-    border-right-style: var(--tw-border-style);
-    border-right-width: 1px;
-  }
-  .border-b {
-    border-bottom-style: var(--tw-border-style);
-    border-bottom-width: 1px;
-  }
-  .border-l {
-    border-left-style: var(--tw-border-style);
-    border-left-width: 1px;
-  }
-  .border-white {
-    border-color: var(--color-white);
-  }
   .bg-black {
     background-color: var(--color-black);
   }
   .bg-gray-400 {
     background-color: var(--color-gray-400);
   }
-  .bg-red-600 {
-    background-color: var(--color-red-600);
-  }
   .stroke-orange-600 {
     stroke: var(--color-orange-600);
-  }
-  .p-1 {
-    padding: calc(var(--spacing) * 1);
-  }
-  .text-center {
-    text-align: center;
   }
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
-  }
-  .text-4xl {
-    font-size: var(--text-4xl);
-    line-height: var(--tw-leading, var(--text-4xl--line-height));
-  }
-  .text-6xl {
-    font-size: var(--text-6xl);
-    line-height: var(--tw-leading, var(--text-6xl--line-height));
   }
   .text-9xl {
     font-size: var(--text-9xl);
@@ -432,23 +348,6 @@
     --motion-loop-count: 1;
   }
   @media (hover: hover) {
-    .group-hover\:motion-preset-blink:is(:where(.group):hover *) {
-      --motion-loop-opacity: 0;
-      --motion-opacity-loop-animation: motion-opacity-loop-mirror calc(var(--motion-opacity-duration, var(--motion-duration)) * var(--motion-opacity-perceptual-duration-multiplier, var(--motion-perceptual-duration-multiplier))) var(--motion-opacity-timing, var(--motion-timing)) var(--motion-opacity-delay, var(--motion-delay)) both var(--motion-opacity-loop-count, var(--motion-loop-count));
-      animation: var(--motion-scale-in-animation), var(--motion-translate-in-animation), var(--motion-rotate-in-animation), var(--motion-filter-in-animation), var(--motion-opacity-in-animation), var(--motion-background-color-in-animation), var(--motion-text-color-in-animation), var(--motion-scale-loop-animation), var(--motion-translate-loop-animation), var(--motion-rotate-loop-animation), var(--motion-filter-loop-animation), var(--motion-opacity-loop-animation), var(--motion-background-color-loop-animation), var(--motion-text-color-loop-animation);
-    }
-  }
-  @media (hover: hover) {
-    .group-hover\:border-orange-600:is(:where(.group):hover *) {
-      border-color: var(--color-orange-600);
-    }
-  }
-  @media (hover: hover) {
-    .group-hover\:text-orange-600:is(:where(.group):hover *) {
-      color: var(--color-orange-600);
-    }
-  }
-  @media (hover: hover) {
     .hover\:motion-preset-expand:hover {
       --motion-origin-scale-x: 50%;
       --motion-origin-scale-y: 50%;
@@ -469,11 +368,6 @@
   @media (hover: hover) {
     .hover\:cursor-pointer:hover {
       cursor: pointer;
-    }
-  }
-  @media (hover: hover) {
-    .hover\:border-orange-600:hover {
-      border-color: var(--color-orange-600);
     }
   }
   @media (hover: hover) {
@@ -1199,17 +1093,5 @@
   }
   100% {
     background-position: -50%;
-  }
-}
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-@layer properties {
-  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
-    *, ::before, ::after, ::backdrop {
-      --tw-border-style: solid;
-    }
   }
 }
