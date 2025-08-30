@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     #Third Party Apps
     "tailwind","theme","django_cotton","django_htmx",
-    "allauth","allauth.account","allauth.socialaccount","allauth.socialaccount.providers.google",
     #Local Apps
     "accounts.apps.AccountsConfig","core.apps.CoreConfig",
 ]
@@ -55,7 +54,6 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django_htmx.middleware.HtmxMiddleware",
-    "allauth.account.middleware.AccountMiddleware", #allauth
 ]
 
 if DEBUG:
@@ -85,29 +83,6 @@ TEMPLATES = [
 WSGI_APPLICATION = "project.wsgi.application"
 
 
-
-#Authentication Backends
-AUTHENTICATION_BACKENDS = [
-    # Needed to login by username in Django admin, regardless of `allauth`
-    'django.contrib.auth.backends.ModelBackend',
-
-    # `allauth` specific authentication methods, such as login by email
-    'allauth.account.auth_backends.AuthenticationBackend',
-]
-
-#Allauth Social Account Providers
-# SOCIALACCOUNT_PROVIDERS = {
-#     'google': {
-#         # For each OAuth based provider, either add a ``SocialApp``
-#         # (``socialaccount`` app) containing the required client
-#         # credentials, or list them here:
-#         'APP': {
-#             'client_id': '123',
-#             'secret': '456',
-#             'key': ''
-#         }
-#     }
-# }
 
 
 # Database
